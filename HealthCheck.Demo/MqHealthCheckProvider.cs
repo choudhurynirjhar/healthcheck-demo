@@ -1,8 +1,4 @@
 ﻿using Microsoft.Extensions.Diagnostics.HealthChecks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HealthCheck.Demo
 {
@@ -11,7 +7,7 @@ namespace HealthCheck.Demo
         public static HealthCheckResult Check(string mqUri)
         {
             // Code to check if MQ is running
-            return HealthCheckResult.Healthy();
+            return HealthCheckResult.Degraded("MQ is running slow!");
         }
     }
 }
